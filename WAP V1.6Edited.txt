@@ -1,4 +1,4 @@
-Q(BeginWAP): This questionnaire is intended to determine whether or not you or your client might qualify for the Massachusetts Weatherization Assistance Program, otherwise know as WAP. WAP provides eligible recipients with funds to "weatherize" their home, such as adding or improving home insulation. For additional details, <a href="https://www.mass.gov/service-details/weatherization-assistance-program-wap">click here</a>. Please answer the following questions as accurate as possible and answer as if you are the person applying for the program. Are you ready to begin?
+Q(BeginWAP): This questionnaire is intended to determine whether or not you or your client might qualify for the Weatherization Assistance Program. Are you ready to begin?
 A: Yes
 	Q(1.1):GOTO:Residency
 A: No
