@@ -1,6 +1,48 @@
-MA Benefits Questionnaire by Michael DiFilippo & Alessandra Ambrogio, the Legal Innovation and Technology (LIT) Fellows of the 2017-2018 Suffolk University Law School Clinical Program
+Title: Benefit Finder
+Author: Suffolk Law Clinics
+Description: 
+Before:
+<style>
+body{
+	background:white;
+	background-image: url("https://suffolklitlab.github.io/images/babbage.jpg");
+	background-color: #fff;
+	background-repeat: repeat-x;
+	background-position: center -120px ;
+}
+#conversation {
+	max-width:900px;
+}
+#icon {
+	z-index:2;
+	margin: 40px auto 0px auto;
+	border-radius: 50%;
+	width:100px; 
+	height:100px; 
+	border: 4px solid #fff;
+	background-color: #fff;
+	background-size: 100px;
+	background-position: center;
+ 	background-repeat: no-repeat;
+	background-image: url('http://suffolklitlab.org/images/seal.jpg');
+}
+.title {
+	text-align:center;
+	border-bottom: solid 1px #888;
+	margin-top:10px;
+	padding-bottom:15px;
+}
+</style>
+<div id="icon"></div>
+<h2 class="title">
+	Benefit Finder <sup><font size=-1>Beta</font></sup>
+</h2>
+<p>This is a class project under active development by Suffolk's <a href="http://suffolklitlab.org/" target="_blank">LIT Lab</a>. You should not rely on it as a source of legal information. It is likely incomplete.</p>
 
-Q(1): Welcome to the MA Benefits Questionnaire (what is this called again?) presented by Suffolk University Law School's Clinical Program.  Are you interested in checking your eligibility for Massachusetts Benefits? 
+
+
+
+Q(1): Welcome to the Benefits Finder presented by Suffolk University Law School's Clinical Program.  Are you interested in checking your eligibility for Massachusetts Benefits? 
 A: Yes
 	Q(1.1):GOTO:CheckEligibility
 A: No
@@ -73,7 +115,7 @@ A: No
 	A: No
 		Q(6.2.2):GOTO:AllSet
 A: No not right now. May I get a link for later?
-	Q: <a href="https://aambrogio.github.io/LIT-QNAs/LIHEAPQNA2018.html">https://aambrogio.github.io/LIT-QNAs/LIHEAPQNA2018.html</a>
+	Q(6.3): <a href="https://aambrogio.github.io/LIT-QNAs/LIHEAPQNA2018.html">https://aambrogio.github.io/LIT-QNAs/LIHEAPQNA2018.html</a>
 
 
 Q(WAPDes): The Massachusetts Weatherization Assistance Program, otherwise know as WAP, provides eligible recipients with funds to "weatherize" their home, such as adding or improving home insulation. For additional details, <a href="https://www.mass.gov/service-details/weatherization-assistance-program-wap">click here</a>. Would you like to determine if you may be eligible for WAP?
