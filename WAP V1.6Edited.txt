@@ -83,6 +83,26 @@ A: No
 	Q(7.2):GOTO:WAPNo
 A: I do not know.
 	Q(7.3):GOTO:Consult
-Q(WAPYes): Based upon your answers to the questions above, it is likely you do qualify for WAP. To fill out an application, call a WAP Representative at (617) 573-1100 or (617) 573-1140 if you have hearing issues.
+Q(WAPYes): Based upon your answers to the questions above, it is likely you do qualify for WAP. To fill out an application, call a WAP Representative at (617) 573-1100 or (617) 573-1140 if you have hearing issues. Would you like to open a draft email with some action items?
+A: Yes
+	Q(8.1):GOTO:DRAFT
+A: No
+	Q(8.2):GOTO:next
 Q(Consult): Without more information, it is difficult to determine whether or not you might qualify for WAP. It is recommended you consult an attorney who specializes in Massachusetts benefits or a representative at the Department of Housing and Community Development (DHCD). Here is the phone number for DHCD: (617) 573-1100.
 Q(WAPNo): It is unlikely you qualify for WAP. If you this was an error, please consult an attorney who specializes in Massachusetts benefits or you can start this questionnaire over. 
+
+Q(EMAIL): Would you like to open a draft email with some action items? 
+A: Yes
+	Q(DRAFT): Alright, we'll draft an email. Note: This will only work if you have a default email setup on this device. If you're not sure if you do, you can go ahead and try. If it doesn't work, we'll just move on.
+	A[javascript:mail2('','Benefits Finder',doc());]: Open draft email
+		Q(11.1.1): Wait a moment to see if a draft email opens. GOTO:next
+A: No
+	Q(11.2):GOTO:next
+
+Q(next): Do you want to check eligibility for other benefits? 
+A: Yes
+	Q(12.1): Which benefit would you like to check next? Click on the benefit below to open the link.
+	A:  <a href="https://aambrogio.github.io/LIT-QNAs/SNAP%20V1.4.html">SNAP: Supplemental Nutrition Assistance Program</a>.
+	A: <a href="https://aambrogio.github.io/LIT-QNAs/LIHEAPQNA2018.html">LIHEAP (Fuel Assistance)</a>.
+A: No
+	Q(12.2): Alright then. Have a nice day. 

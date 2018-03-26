@@ -127,13 +127,30 @@ A: Under the age of 18
 	Q(11.4):GOTO:Qualified
 A: If none of these describe you, click here.
 	Q(11.5):GOTO:Unqualified
-Q(Qualified): You may qualify for SNAP Benefits. Click "Download" below for some additional information regarding applying for SNAP Benefits.
-A: Download
+Q(Qualified): You may qualify for SNAP Benefits. Would you like to open a draft email with some action items?
+A: Yes
+	Q(12.1):GOTO:DRAFT
+A: No
+	Q(12.2):GOTO:next
 Q(Unqualified): It is unlikely you qualify for SNAP Benefits based upon your answers to these questions. If you think this is an error, please contact an attorney.
 A: Click here if you would like to start over.
 	Q(13.1):GOTO:Food
 
+Q(EMAIL): Would you like to open a draft email with some action items? 
+A: Yes
+	Q(DRAFT): Alright, we'll draft an email. Note: This will only work if you have a default email setup on this device. If you're not sure if you do, you can go ahead and try. If it doesn't work, we'll just move on.
+	A[javascript:mail2('','Benefits Finder',doc());]: Open draft email
+		Q(14.1.1): Wait a moment to see if a draft email opens. GOTO:next
+A: No
+	Q(14.2):GOTO:next
 
+Q(next): Do you want to check eligibility for other benefits? 
+A: Yes
+	Q(15.1): Which benefit would you like to check next? Click on the benefit below to open the link.
+	A: <a href="https://aambrogio.github.io/LIT-QNAs/WAPV1.6Edited.html">Weatherization Assistance Program</a>.
+	A: <a href="https://aambrogio.github.io/LIT-QNAs/LIHEAPQNA2018.html">LIHEAP (Fuel Assistance)</a>.
+A: No
+	Q(15.2): Alright then. Have a nice day. 
 
 
 
