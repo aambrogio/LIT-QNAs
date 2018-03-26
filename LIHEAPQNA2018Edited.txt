@@ -253,9 +253,17 @@ Q(Zipcode): What is your zipcode?
 X:number
 	Q(12.1): Have you ever applied for fuel assistance for a residence or household in the state of Massachusetts?
 	A: Yes
-		Q(12.1.1): Applications are mailed to households after the first year of using Fuel Assistance (LIHEAP). If you have not received another application in order to apply between November 1st and April 30th of the program year, you can find your local agency using this website, <a href="https://hedfuel.azurewebsites.net/" target="_blank">DHCD Resource Locator</a> and selecting your town. Use the drop-down window to find your town and then call your local agency with the number provided.
+		Q(12.1.1): Applications are mailed to households after the first year of using Fuel Assistance (LIHEAP). If you have not received another application in order to apply between November 1st and April 30th of the program year, you can find your local agency using this website, <a href="https://hedfuel.azurewebsites.net/" target="_blank">DHCD Resource Locator</a> and selecting your town. Use the drop-down window to find your town and then call your local agency with the number provided. Would you like to open a draft email with some action items?
+		A: Yes
+			Q(12.1.1.1):GOTO:DRAFT
+		A: No
+			Q(12.1.1.2):GOTO:next
 	A: No
-		Q(12.1.2): First-time applicants must apply in person at the fuel assistance agency in their area. You can find your local agency using this link, <a href="https://hedfuel.azurewebsites.net/" target="_blank">DHCD Resource Locator</a>, selecting your town, and calling that agency's phone number for Fuel Assistance. They will direct you to your next steps on the phone. 
+		Q(12.1.2): First-time applicants must apply in person at the fuel assistance agency in their area. You can find your local agency using this link, <a href="https://hedfuel.azurewebsites.net/" target="_blank">DHCD Resource Locator</a>, selecting your town, and calling that agency's phone number for Fuel Assistance. They will direct you to your next steps on the phone. Would you like to open a draft email with some action items?
+		A: Yes
+			Q(12.1.2.1):GOTO:DRAFT
+		A: No
+			Q(12.1.2.2):GOTO:next
 
 Q(HelpNeeded): Based on the answers you provided, it seems you may need some further assistance. Would you like to speak with a LIHEAP representative?
 A: Yes
@@ -264,3 +272,19 @@ A: No
 	Q(13.2):GOTO:AllSet
 
 Q(AllSet): Thank you for your participation and have a wonderful day!
+
+Q(EMAIL): Would you like to open a draft email with some action items? 
+A: Yes
+	Q(DRAFT): Alright, we'll draft an email. Note: This will only work if you have a default email setup on this device. If you're not sure if you do, you can go ahead and try. If it doesn't work, we'll just move on.
+	A[javascript:mail2('','Benefits Finder',doc());]: Open draft email
+		Q(15.1.1): Wait a moment to see if a draft email opens. GOTO:next
+A: No
+	Q(15.2):GOTO:next
+
+Q(next): Do you want to check eligibility for other benefits? 
+A: Yes
+	Q(16.1): Which benefit would you like to check next? Click on the benefit below to open the link.
+	A: <a href="https://aambrogio.github.io/LIT-QNAs/WAPV1.6Edited.html">Weatherization Assistance Program</a>.
+	A: <a href="https://aambrogio.github.io/LIT-QNAs/SNAP%20V1.4.html">SNAP: Supplemental Nutrition Assistance Program</a>.
+A: No
+	Q(16.2): Alright then. Have a nice day. 
