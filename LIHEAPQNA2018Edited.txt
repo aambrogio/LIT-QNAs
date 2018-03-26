@@ -10,11 +10,11 @@ A: No
 
 Q(Residency): Are you a resident of Massachusetts?
 A: No
-	Q(2.1): 	You do not qualify for LIHEAP in Massachusetts but you may qualify for it in your state of Residency. Google search to your state's .gov site along with "LIHEAP" to find out more information about your state's eligibility requirements?
+	Q(2.1): 	*You do not qualify for LIHEAP in Massachusetts but you may qualify for it in your state of Residency. Google search to your state's .gov site along with "LIHEAP" to find out more information about your state's eligibility requirements?
 A: Yes
 	Q(2.2):GOTO:Income
 
-Q(Income): How much do you, and the other taxpayers in your household, make in a year, before taxes?
+Q(Income): What is your total yearly household income (before taxes)? (Do not insert commas or periods when entering the total income). 
 X:number
 	Q(Household): How many individuals are in your household, including yourself? (This would include yourself, your spouse, and any dependents, such as children, that you include on your tax returns).
 	X[javascript:if(fedpov(getvar('Household'),getvar('Income'),100)){goto('OneHundred')} else if(fedpov(getvar('Household'),getvar('Income'),125)){goto('OneTwentyFive')} else if(fedpov(getvar('Household'),getvar('Income'),150)){goto('OneFifty')} else if(fedpov(getvar('Household'),getvar('Income'),175)){goto('OneSeventyFive')} else if(fedpov(getvar('Household'),getvar('Income'),200)){goto('TwoHundred')}else{goto('PossibleSixty')}]:number

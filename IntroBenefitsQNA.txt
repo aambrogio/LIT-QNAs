@@ -40,7 +40,7 @@ A: No
 A: Yes, but first I would like to know more about what MA Benefits are.
 	Q(3.3):GOTO:MABTypes
 
-Q(CheckEligibility): Of the options of Massachusetts Benefits, which would you like to check your eligibility for first?
+Q(CheckEligibility): Which of the following programs would you like to check first?
 A: Food Assistance (SNAP)
 	Q(4.1):GOTO:SNAPDes
 A: Fuel Assistance (LIHEAP)
@@ -65,8 +65,7 @@ A: Not right now. May I get a link for later?
 
 Q(LIHEAPDes): The Low-Income Home Energy Assistance Program (LIHEAP) is a fuel assistance that helps people and families afford heat in their homes. For additional details, <a href="https://www.mass.gov/service-details/learn-about-fuel-assistance">click here</a>. Would you like to determine if you may be eligible for LIHEAP?
 A: Yes
-	Q(6.1): Click on the link. 
-	A: <a href="https://aambrogio.github.io/LIT-QNAs/LIHEAPQNA2018.html">LIHEAP</a>
+	Q(6.1): Click on the link. <a href="https://aambrogio.github.io/LIT-QNAs/LIHEAPQNA2018.html">LIHEAP</a> 
 A: No
 	Q(6.2): Would you like to determine if you may be eligible for a different MA Benefit program?
 	A: Yes
