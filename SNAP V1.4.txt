@@ -41,21 +41,46 @@ body{
 
 After: <script src="https://aambrogio.github.io/LIT-QNAs/scripts.js"></script>
 
+DOC(1): Action Items
+
+Q(Begin): This QNA is meant to determine if you or your client may qualify for SNAP (Supplemental Nutritional Assistance Program). Please proceed through the following questions as if you are the individual attempting to apply for SNAP.  Are you ready to proceed?
+A: Yes
+	Q(1.1):GOTO:Food
+A: No
+	Q(1.2): You can find more information about SNAP at the Government website. <a href="https://www.mass.gov/snap-benefits-food-stamps">SNAP</a>. How do you wish to proceed?
+	A: I would like to save links for later.
+		DOC(1.2.1): SNAP QNA Link for later (Copy/Paste Link): https://aambrogio.github.io/LIT-QNAs/SNAP%20V1.4.html
+SNAP Government Website Link for later (Copy/Paste Link): https://www.mass.gov/snap-benefits-food-stamps
+		Q(1.2.1):GOTO:SNAPQNALINK
+	A: I would like to keep going through this QNA now.
+		Q(1.2.2):GOTO:Food
+	A: I'm all set.
+		Q(1.2.3):GOTO:AllSet
+
+Q(SNAPQNALINK): Here is the SNAP QNA link for later, <a href="https://aambrogio.github.io/LIT-QNAs/SNAP%20V1.4.html">SNAP QNA Link</a>. Would you like to open a draft email with some action items? 
+A: Yes
+	Q(2.1):GOTO:DRAFT
+A: No
+	Q(2.2):GOTO:AllSet
+
 Q(Food): Do you need help paying for food?
 A: Yes
 	Q(1.1):GOTO:Resident
 A: No
 	Q(1.2):GOTO:Unqualified
+
 Q(Resident): Are you a resident of Massachusetts?
 A: Yes
 	Q(2.1):GOTO:Citizen
 A: No
 	Q(2.2):GOTO:Unqualified
+
 Q(Citizen): Are you a citizen of the United States?
 A: Yes
 	Q(3.1):GOTO:Assets
 A: No
 	Q(3.2):GOTO:NonCitizen
+
 Q(NonCitizen): Are you a member of one of the following groups?
 <ul>
 <li>Lawful Permanent Resident</li>
@@ -75,6 +100,7 @@ A: Yes
 	Q(3.15):GOTO:Assets
 A: No
 	Q(4.2):GOTO:Unqualified
+
 Q(Assets): How much money in household assets/resources does your family have?
 A: $0.00 to $2,250.00
 	Q(5.1):GOTO:Household
@@ -82,11 +108,13 @@ A: $2,250.00 to $3,500.00
 	Q(5.2):GOTO:Elderly
 A: More than $3,500.00
 	Q(5.3):GOTO:Unqualified
+
 Q(Elderly): Is anyone in your household above the age of 60?
 A: Yes
 	Q(6.1):GOTO:Household
 A: No
 	Q(6.2):GOTO:Unqualified
+
 Q(Household): How many people live in your household?
 A: 1
 	Q(7.1):GOTO:HouseholdIncome
@@ -104,6 +132,7 @@ A: 7
 	Q(7.7):GOTO:HouseholdIncome
 A: 8
 	Q(7.8):GOTO:HouseholdIncome
+
 Q(HouseholdIncome): What is your total monthly household income?
 X[javascript:if (fedpov(getvar('Household'),(getvar('HouseholdIncome')*12)*1.3,100)){ goto('Employment') } else { goto('Unqualified') } ]:
 Q(Employment): What is your employment status?
@@ -111,11 +140,13 @@ A: Employed
 	Q(9.1):GOTO:Qualified
 A: Unemployed
 	Q(9.2):GOTO:JobSearch
+
 Q(JobSearch): Are you looking for a job?
 A: Yes
 	Q(10.1):GOTO:Qualified
 A: No
 	Q(10.2):GOTO:Exceptions
+
 Q(Exceptions): Are you any of the following?
 A: Elderly
 	Q(11.1):GOTO:Qualified
@@ -127,30 +158,33 @@ A: Under the age of 18
 	Q(11.4):GOTO:Qualified
 A: If none of these describe you, click here.
 	Q(11.5):GOTO:Unqualified
-Q(Qualified): You may qualify for SNAP Benefits. Would you like to open a draft email with some action items?
+
+Q(Qualified): You may qualify for SNAP Benefits. You can apply online at <a href="https://hhsvgapps01.hhs.state.ma.us/ierhome/LandingPage.do?method=displayConsumerHomePage&pageSwitch=HOME">Apply to SNAP online</a>. You could also speak with a Department of Transitional Assistance (DTA) Representative at (877) 382-2363. Would you like to open a draft email with some action items?
 A: Yes
+	DOC(12.1): Here is the link to apply to SNAP online (copy/paste): https://hhsvgapps01.hhs.state.ma.us/ierhome/LandingPage.do?method=displayConsumerHomePage&pageSwitch=HOME
+Department of Transitional Assistance (DTA): (877) 382-2363.
 	Q(12.1):GOTO:DRAFT
 A: No
 	Q(12.2):GOTO:next
-Q(Unqualified): It is unlikely you qualify for SNAP Benefits based upon your answers to these questions. If you think this is an error, please contact an attorney.
-A: Click here if you would like to start over.
-	Q(13.1):GOTO:Food
 
-Q(EMAIL): Would you like to open a draft email with some action items? 
+Q(Unqualified): It is unlikely you qualify for SNAP Benefits based upon your answers to these questions. If you think this is an error, please contact an attorney specialist or speak with a Department of Transitional Assistance (DTA) Representative at (877) 382-2363. Would you like to open a draft email with some action items?
 A: Yes
-	Q(DRAFT): Alright, we'll draft an email. Note: This will only work if you have a default email setup on this device. If you're not sure if you do, you can go ahead and try. If it doesn't work, we'll just move on.
-	A[javascript:mail2('','Benefits Finder',doc());]: Open draft email
-		Q(14.1.1): Wait a moment to see if a draft email opens. GOTO:next
+	DOC(13.1): Department of Transitional Assistance (DTA): (877) 382-2363
+	Q(13.1):GOTO:DRAFT
 A: No
-	Q(14.2):GOTO:next
+	Q(13.2):GOTO:AllSet
 
+Q(DRAFT): Alright, we'll draft an email. Note: This will only work if you have a default email setup on this device. If you're not sure if you do, you can go ahead and try. If it doesn't work, we'll just move on.
+A[javascript:mail2('','Benefits Finder',doc());]: Open draft email
+	Q(14.1): Wait a moment to see if a draft email opens. GOTO:next
+	
 Q(next): Do you want to check eligibility for other benefits? 
 A: Yes
 	Q(15.1): Which benefit would you like to check next? Click on the benefit below to open the link.
 	A: <a href="https://aambrogio.github.io/LIT-QNAs/WAPV1.6Edited.html">Weatherization Assistance Program</a>.
 	A: <a href="https://aambrogio.github.io/LIT-QNAs/LIHEAPQNA2018.html">LIHEAP (Fuel Assistance)</a>.
 A: No
-	Q(15.2): Alright then. Have a nice day. 
+	Q(AllSet): Have a nice day. 
 
 
 
