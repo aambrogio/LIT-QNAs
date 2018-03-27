@@ -40,7 +40,9 @@ body{
 <p>This is a class project under active development by Suffolk's <a href="http://suffolklitlab.org/" target="_blank">LIT Lab</a>. You should not rely on it as a source of legal information. It is likely incomplete.</p>
 
 
+After: <script src="https://aambrogio.github.io/LIT-QNAs/scripts.js"></script>
 
+DOC(1): Action Items
 
 Q(1): Welcome to the Benefits Finder presented by Suffolk University Law School's Clinical Program.  Are you interested in checking your eligibility for Massachusetts Benefits? 
 A: Yes
@@ -98,12 +100,17 @@ A: I do not want to check my eligibility for any of these programs.
 
 Q(SNAPDes): SNAP, the Supplemental Nutritional Assistance Program, was developed to aid individuals and families buy nutritious foods. Would you like to determine if you may be eligible for SNAP?
 A: Yes
-	Q(5.1): Click on the link.
+	Q(5.1): Click on the link below.
 	A: <a href="https://aambrogio.github.io/LIT-QNAs/SNAP%20V1.4.html">SNAP</a>
 A:No
 	Q(5.2):GOTO:AllSet
 A: Not right now. May I get a link for later?
-	Q(5.3): <a href="https://aambrogio.github.io/LIT-QNAs/SNAP%20V1.4.html">https://aambrogio.github.io/LIT-QNAs/SNAP%20V1.4.html</a>
+	DOC(5.3): SNAP QNA Link for later (copy/paste): https://aambrogio.github.io/LIT-QNAs/SNAP%20V1.4.html
+	Q(5.3): Here is the SNAP QNA Link for later. <a href="https://aambrogio.github.io/LIT-QNAs/SNAP%20V1.4.html">https://aambrogio.github.io/LIT-QNAs/SNAP%20V1.4.html</a>. Would you like to open a draft email with some action items? 
+	A: Yes
+		Q(5.3.1):GOTO:DRAFT
+	A: No
+		Q(5.3.2):GOTO:next
 
 Q(LIHEAPDes): The Low-Income Home Energy Assistance Program (LIHEAP) is a fuel assistance that helps people and families afford heat in their homes. For additional details, <a href="https://www.mass.gov/service-details/learn-about-fuel-assistance">click here</a>. Would you like to determine if you may be eligible for LIHEAP?
 A: Yes
@@ -115,7 +122,12 @@ A: No
 	A: No
 		Q(6.2.2):GOTO:AllSet
 A: No not right now. May I get a link for later?
-	Q(6.3): <a href="https://aambrogio.github.io/LIT-QNAs/LIHEAPQNA2018.html">https://aambrogio.github.io/LIT-QNAs/LIHEAPQNA2018.html</a>
+	DOC(6.3): LIHEAP QNA Link for later (copy/paste): https://aambrogio.github.io/LIT-QNAs/LIHEAPQNA2018.html
+	Q(6.3): Here is the LIHEAP QNA Link for later. <a href="https://aambrogio.github.io/LIT-QNAs/LIHEAPQNA2018.html">https://aambrogio.github.io/LIT-QNAs/LIHEAPQNA2018.html</a>. Would you like to open a draft email with some action items? 
+	A: Yes
+		Q(6.3.1):GOTO:DRAFT
+	A: No
+		Q(6.3.2):GOTO:next
 
 
 Q(WAPDes): The Massachusetts Weatherization Assistance Program, otherwise know as WAP, provides eligible recipients with funds to "weatherize" their home, such as adding or improving home insulation. For additional details, <a href="https://www.mass.gov/service-details/weatherization-assistance-program-wap">click here</a>. Would you like to determine if you may be eligible for WAP?
@@ -129,10 +141,21 @@ A: No
 	A: No, thank you, I'm all set.
 		Q(7.2.2):GOTO:AllSet
 A: Not right now. May I get a link for later?
-	Q(7.3): Here is the link. <a href="https://aambrogio.github.io/LIT-QNAs/WAPV1.6Edited.html">https://aambrogio.github.io/LIT-QNAs/WAPV1.6Edited.html</a>. Would you like to check your eligibility for any other MA Benefit Programs?
-	A: Sure.
-		Q(7.3.1):GOTO:CheckEligibility
-	A: No thank you, I'm all set.
-		Q(7.3.2):GOTO:AllSet
+	DOC(7.3): WAP QNA Link for later (copy/paste): https://aambrogio.github.io/LIT-QNAs/WAPV1.6Edited.html
+	Q(7.3): Here is the WAP link for later. <a href="https://aambrogio.github.io/LIT-QNAs/WAPV1.6Edited.html">https://aambrogio.github.io/LIT-QNAs/WAPV1.6Edited.html</a>. Would you like to open a draft email with some action items? 
+	A: Yes
+		Q(7.3.1):GOTO:DRAFT
+	A: No
+		Q(7.3.2):GOTO:next
+
+Q(DRAFT): Alright, we'll draft an email. Note: This will only work if you have a default email setup on this device. If you're not sure if you do, you can go ahead and try. If it doesn't work, we'll just move on.
+A[javascript:mail2('','Benefits Finder',doc());]: Open Draft Email
+	Q(8.1): Wait a moment to see if a draft email opens. GOTO:next
+
+Q(next): Would you like to check your eligibility for any other MA Benefit Programs?
+A: Sure.
+	Q(9.1):GOTO:CheckEligibility
+A: No thank you, I'm all set.
+	Q(9.2):GOTO:AllSet
 
 Q(AllSet): Have a nice day!
