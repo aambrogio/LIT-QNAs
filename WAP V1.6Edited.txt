@@ -40,6 +40,8 @@ body{
 <p>This is a class project under active development by Suffolk's <a href="http://suffolklitlab.org/" target="_blank">LIT Lab</a>. You should not rely on it as a source of legal information. It is likely incomplete.</p>
 
 
+After: <script src="https://aambrogio.github.io/LIT-QNAs/scripts.js"></script>
+
 Q(BeginWAP): This questionnaire is intended to determine whether or not you or your client might qualify for the Weatherization Assistance Program. Are you ready to begin?
 A: Yes
 	Q(1.1):GOTO:Residency
