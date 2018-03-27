@@ -48,7 +48,7 @@ Q(BeginWAP): This QNA is meant to determine if you or your client may qualify fo
 A: Yes
 	Q(1.1):GOTO:Residency
 A: No
-	Q(1.2): You can find more information about WAP at the Government website. <a href="https://www.mass.gov/service-details/weatherization-assistance-program-wap">Weatherization Assistance Program</a>. How do you wish to proceed?
+	Q(1.2): You can find more information about WAP at the Government website. <a href="https://www.mass.gov/service-details/weatherization-assistance-program-wap">Weatherization Assistance Program</a>. What would you like to do next?
 	A: I would like to save links for later.
 		DOC(1.2.1): WAP QNA Link for later (Copy/Paste Link): https://aambrogio.github.io/LIT-QNAs/WAPV1.6Edited.html
 WAP Government Website Link for later (Copy/Paste Link): https://www.mass.gov/service-details/weatherization-assistance-program-wap

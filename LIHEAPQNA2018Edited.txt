@@ -57,6 +57,17 @@ LIHEAP Government Website Link for later (Copy/Paste Link): https://www.mass.gov
 		Q(1.2.2):GOTO:Residency
 	A: I'm all set.
 		Q(1.2.3):GOTO:AllSet
+A: Yes, I was redirected here from the Weatherization Assistance Program (WAP) QNA.
+	Q(1.3): Thank you for pausing your WAP QNA to determine your eligibility for LIHEAP. It is possible you were redirected here in the same browser. Do you need a link back to the WAP QNA for later?
+	A: Yes
+		DOC(1.3.1): WAP QNA Link: https://aambrogio.github.io/LIT-QNAs/WAPV1.6Edited.html
+		Q(1.3.1): Here is the link to get you back to the WAP QNA (copy/paste). https://aambrogio.github.io/LIT-QNAs/WAPV1.6Edited.html. Are you ready to proceed?
+		A: Yes
+			Q(1.3.1.1):GOTO:Residency
+		A: No
+			Q(1.3.1.2):GOTO:AllSet
+	A: No
+		Q(1.3.2):GOTO:Residency
 
 Q(LIHEAPQNALINK): Here is the LIHEAP QNA link for later, <a href="https://aambrogio.github.io/LIT-QNAs/LIHEAPQNA2018.html">LIHEAP QNA Link</a>. Would you like to open a draft email with some action items? 
 A: Yes
