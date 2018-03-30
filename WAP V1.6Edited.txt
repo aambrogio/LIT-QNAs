@@ -57,6 +57,8 @@ WAP Government Website Link for later (Copy/Paste Link): https://www.mass.gov/se
 		Q(1.2.2):GOTO:Residency
 	A: I'm all set.
 		Q(1.2.3):GOTO:AllSet
+A: Yes, I finished the LIHEAP QNA so I could answer LIHEAP questions here.
+	Q:GOTO:LIHEAP
 
 Q(WAPQNALINK): Here is the WAP QNA link for later, <a href="https://aambrogio.github.io/LIT-QNAs/WAPV1.6Edited.html">WAP QNA Link</a>. Would you like to open a draft email with some action items? 
 A: Yes
@@ -71,11 +73,11 @@ A: No
 	Q(3.2):GOTO:WAPNo
 Q(LIHEAP): In Massachusetts, in order to qualify for WAP, you must first qualify for LIHEAP. For more information on LIHEAP, <a href="https://www.mass.gov/service-details/low-income-home-energy-assistance-program-liheap">click here</a>. Do you receive benefits from the Low Income Home Energy Assistance Program, commonly known as LIHEAP? 
 A: Yes
-	Q(4.1):GOTO:Qualify
+	Q(4.1):GOTO:WAPYes
 A: No
 	Q(4.2):GOTO:Apply
 A: I do not know.
-	Q(4.3): In order to be eligible for WAP, you must first qualify for LIHEAP. There is a separate questionnaire to determine whether or not you might qualify for LIHEAP. Do you want to answer the LIHEAP questionnaire?
+	Q(LIHEAPQNA): In order to be eligible for WAP, you must first qualify for LIHEAP. There is a separate questionnaire to determine whether or not you might qualify for LIHEAP. Do you want to answer the LIHEAP questionnaire?
 	A: Yes
 		Q(4.3.1): Here is the link for the LIHEAP QNA. <a href="https://aambrogio.github.io/LIT-QNAs/LIHEAPQNA2018.html">LIHEAP QNA</a>.
 	A: No
@@ -90,6 +92,16 @@ Q(Apply): Have you ever applied for LIHEAP?
 A: Yes
 	Q(5.1):GOTO:Denied
 A: No
+	Q:GOTO:Qualify
+
+Q(Qualify): Are you eligible for LIHEAP according to the LIHEAP QNA?
+A: Yes
+	Q:GOTO:WAPYes
+A: No
+	Q:GOTO:SSI
+A: I do not know. I would need to check.
+	Q:GOTO:LIHEAPQNA
+
 Q(Denied): Were you denied LIHEAP benefits?
 A: Yes
 	Q(6.1):GOTO:WAPNo
