@@ -106,7 +106,7 @@ A: Fuel Assistance (LIHEAP)
 A: The Weatherization Assistance Program (WAP)
 	Q(5.3):GOTO:WAPDes
 A: I want to check a different Benefits program that is not listed.
-	Q(5.4): We are sorry that we do not have the Massachusetts Benefits program that you want to check your eligibility for. We are working hard to add more categories. Would you like to check your eligibility for one of the listed programs?
+	Q(5.4): We are sorry that we do not have more benefits programs for you to check. We are working hard to add more categories. Would you like to check your eligibility for one of the listed programs?
 	A: Yes
 		Q(5.4.1):GOTO:CheckEligibility
 	A: No
