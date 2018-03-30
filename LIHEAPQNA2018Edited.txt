@@ -284,8 +284,10 @@ A: I would like to check my eligibility for other benefits.
 	Q(12.2):GOTO:nextwhichbenefit
 A: I would like links to check my eligibility for other benefits later.
 	Q(12.3):GOTO:BENEFITLINKS
+A: I was originally interacting with the WAP QNA before I was redirected here. I would like to return to the WAP QNA.
+	Q(12.4):GOTO:WAP
 A: I am all set.
-	Q(12.4):GOTO:AllSet
+	Q(12.5):GOTO:AllSet
 		
 Q(Zipcode): What is your zipcode?
 X:number
@@ -298,6 +300,8 @@ X:number
 			Q(13.1.1.1):GOTO:DRAFT
 		A: No
 			Q(13.1.1.2):GOTO:next
+		A: No, I would like to return to the WAP QNA that redirected me here.
+			Q(14.3):GOTO:WAP
 	A: No
 		DOC(13.1.2): Copy/Paste link and go to website for local phone number: https://hedfuel.azurewebsites.net/
 		Q(13.1.2): First-time applicants must apply in person at the fuel assistance agency in their area. You can find your local agency using this link, <a href="https://hedfuel.azurewebsites.net/" target="_blank">DHCD Resource Locator</a>, selecting your town, and calling that agency's phone number for Fuel Assistance. They will direct you to your next steps on the phone. Would you like to open a draft email with some action items?
@@ -305,6 +309,8 @@ X:number
 			Q(13.1.2.1):GOTO:DRAFT
 		A: No
 			Q(13.1.2.2):GOTO:next
+		A: No, I would like to return to the WAP QNA that redirected me here.
+			Q(14.3):GOTO:WAP
 
 Q(HelpNeeded): Based on the answers you provided, it seems you may need some further assistance. Would you like to speak with a LIHEAP representative?
 A: Yes
@@ -316,16 +322,14 @@ A: Yes
 		Q(14.1.2):GOTO:AllSet
 A: No
 	Q(14.2):GOTO:AllSet
+A: No, I would like to return to the WAP QNA that redirected me here.
+	Q(14.3):GOTO:WAP
 
 Q(AllSet): Thank you for your participation and have a wonderful day!
 
-Q(EMAIL): Would you like to open a draft email with some action items? 
-A: Yes
-	Q(DRAFT): Alright, we'll draft an email. Note: This will only work if you have a default email setup on this device. If you're not sure if you do, you can go ahead and try. If it doesn't work, we'll just move on.
-	A[javascript:mail2('','Benefits Finder',doc());]: Open Draft Email
-		Q(16.1.1): Wait a moment to see if a draft email opens. GOTO:next
-A: No
-	Q(16.2):GOTO:next
+Q(DRAFT): Alright, we'll draft an email. Note: This will only work if you have a default email setup on this device. If you're not sure if you do, you can go ahead and try. If it doesn't work, we'll just move on.
+A[javascript:mail2('','Benefits Finder',doc());]: Open Draft Email
+	Q(16.1): Wait a moment to see if a draft email opens. GOTO:next
 
 Q(next): Do you want to check eligibility for other benefits? 
 A: Yes
@@ -334,6 +338,8 @@ A: Yes
 	A: <a href="https://aambrogio.github.io/LIT-QNAs/SNAP%20V1.4.html">SNAP: Supplemental Nutrition Assistance Program</a>.
 A: No
 	Q(17.2): Alright then. Have a nice day. 
+A: Yes, I was redirected here from the WAP QNA and I would like to return there.
+	Q(17.3):GOTO:WAP
 
 Q(BENEFITLINKS): Here are links to check if you are eligible for SNAP or WAP Benefits. <a href="https://aambrogio.github.io/LIT-QNAs/WAPV1.6Edited.html">Weatherization Assistance Program: https://aambrogio.github.io/LIT-QNAs/WAPV1.6Edited.html</a> and <a href="https://aambrogio.github.io/LIT-QNAs/SNAP%20V1.4.html">SNAP: Supplemental Nutrition Assistance Program: https://aambrogio.github.io/LIT-QNAs/SNAP%20V1.4.html</a>. Would you like to open a draft email with some action items? 
 A: Yes
@@ -343,3 +349,8 @@ Weatherization Assistance Program: https://aambrogio.github.io/LIT-QNAs/WAPV1.6E
 	Q(18.1):GOTO:DRAFT
 A: No
 	Q(18.2):GOTO:AllSet
+A: No. I was redirected here from the WAP QNA. I would like to return there without an email of action items.
+	Q(18.3):GOTO:WAP
+
+Q(WAP): Now that you have completed the LIHEAP QNA, you can return to the WAP QNA and answer the LIHEAP questions accordingly. Click on the link below to go to the WAP QNA.
+A: <a href="https://aambrogio.github.io/LIT-QNAs/WAPV1.6Edited.html">Weatherization Assistance Program: https://aambrogio.github.io/LIT-QNAs/WAPV1.6Edited.html</a> 
