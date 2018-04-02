@@ -141,7 +141,7 @@ A[javascript:mail2('','Benefits Finder',doc());]: Open draft email
 Q(next): Do you want to check eligibility for other benefits? 
 A: Yes
 	Q(14.1): Which benefit would you like to check next? Click on the benefit below to open the link.
-	A:  <a href="https://aambrogio.github.io/LIT-QNAs/SNAP%20V1.4.html">SNAP: Supplemental Nutrition Assistance Program</a>.
-	A: <a href="https://aambrogio.github.io/LIT-QNAs/LIHEAPQNA2018.html">LIHEAP (Fuel Assistance)</a>.
+	A[https://aambrogio.github.io/LIT-QNAs/SNAP%20V1.4.html]: SNAP: Supplemental Nutrition Assistance Program
+	A[https://aambrogio.github.io/LIT-QNAs/LIHEAPQNA2018.html]: LIHEAP (Fuel Assistance)
 A: No
 	Q(AllSet): Have a nice day. 
