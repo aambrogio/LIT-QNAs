@@ -129,7 +129,8 @@ A: Not right now. May I get a link for later?
 
 Q(LIHEAPDes): The Low-Income Home Energy Assistance Program (LIHEAP) is a fuel assistance that helps individuals and families with energy costs in their homes. For additional details, <a href="https://www.mass.gov/service-details/learn-about-fuel-assistance">click here</a>. Would you like to determine if you may be eligible for LIHEAP?
 A: Yes
-	Q(7.1): Click on the link. <a href="https://aambrogio.github.io/LIT-QNAs/LIHEAPQNA2018.html">LIHEAP</a> 
+	Q(7.1): Click on the link below. 
+	A{https://aambrogio.github.io/LIT-QNAs/LIHEAPQNA2018.html]: LIHEAP 
 A: No
 	Q(7.2): Would you like to determine if you may be eligible for a different MA Benefit program?
 	A: Yes
