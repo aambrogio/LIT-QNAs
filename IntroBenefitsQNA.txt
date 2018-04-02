@@ -121,7 +121,8 @@ A: Yes
 A:No
 	Q(6.2):GOTO:AllSet
 A: Not right now. May I get a link for later?
-	DOC(6.3): SNAP QNA Link for later (copy/paste): https://aambrogio.github.io/LIT-QNAs/SNAP%20V1.4.html
+	DOC(6.3): 
+SNAP QNA Link for later (copy/paste): https://aambrogio.github.io/LIT-QNAs/SNAP%20V1.4.html
 	Q(6.3): Here is the SNAP QNA Link for later. <a href="https://aambrogio.github.io/LIT-QNAs/SNAP%20V1.4.html">https://aambrogio.github.io/LIT-QNAs/SNAP%20V1.4.html</a>. Would you like to open a draft email with some action items? 
 	A: Yes
 		Q(6.3.1):GOTO:DRAFT
@@ -139,7 +140,8 @@ A: No
 	A: No
 		Q(7.2.2):GOTO:AllSet
 A: No not right now. May I get a link for later?
-	DOC(7.3): LIHEAP QNA Link for later (copy/paste): https://aambrogio.github.io/LIT-QNAs/LIHEAPQNA2018.html
+	DOC(7.3): 
+LIHEAP QNA Link for later (copy/paste): https://aambrogio.github.io/LIT-QNAs/LIHEAPQNA2018.html
 	Q(7.3): Here is the LIHEAP QNA Link for later. <a href="https://aambrogio.github.io/LIT-QNAs/LIHEAPQNA2018.html">https://aambrogio.github.io/LIT-QNAs/LIHEAPQNA2018.html</a>. Would you like to open a draft email with some action items? 
 	A: Yes
 		Q(7.3.1):GOTO:DRAFT
@@ -158,7 +160,8 @@ A: No
 	A: No, thank you, I'm all set.
 		Q(8.2.2):GOTO:AllSet
 A: Not right now. May I get a link for later?
-	DOC(8.3): WAP QNA Link for later (copy/paste): https://aambrogio.github.io/LIT-QNAs/WAPV1.6Edited.html
+	DOC(8.3): 
+WAP QNA Link for later (copy/paste): https://aambrogio.github.io/LIT-QNAs/WAPV1.6Edited.html
 	Q(8.3): Here is the WAP link for later. <a href="https://aambrogio.github.io/LIT-QNAs/WAPV1.6Edited.html">https://aambrogio.github.io/LIT-QNAs/WAPV1.6Edited.html</a>. Would you like to open a draft email with some action items? 
 	A: Yes
 		Q(8.3.1):GOTO:DRAFT
