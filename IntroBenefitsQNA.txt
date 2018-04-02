@@ -44,6 +44,7 @@ body{
 After: <script src="https://aambrogio.github.io/LIT-QNAs/scripts.js"></script>
 
 DOC(1):Action Items: Benefit Finder
+Link to Benefit Finder: https://aambrogio.github.io/LIT-QNAs/IntroBenefitsQNA.html
 
 Q(1): Are you interested in checking your eligibility for Massachusetts Benefits? 
 A: Yes
