@@ -148,7 +148,7 @@ A: No not right now. May I get a link for later?
 Q(WAPDes): The Massachusetts Weatherization Assistance Program, otherwise know as WAP, provides eligible recipients with funds to "weatherize" their home, such as adding or improving home insulation. For additional details, <a href="https://www.mass.gov/service-details/weatherization-assistance-program-wap">click here</a>. Would you like to determine if you may be eligible for WAP?
 A: Yes
 	Q(8.1): Click on the link.
-	A: <a href="https://aambrogio.github.io/LIT-QNAs/WAPV1.6Edited.html">Weatherization Assistance Program</a>
+	A[https://aambrogio.github.io/LIT-QNAs/WAPV1.6Edited.html]: Weatherization Assistance Program
 A: No
 	Q(8.2): Would you like to determine if you may be eligible for a different MA Benefit program?
 	A: Yes
