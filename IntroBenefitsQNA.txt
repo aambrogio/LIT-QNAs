@@ -115,7 +115,7 @@ A: I want to check a different Benefits program that is not listed.
 Q(SNAPDes): SNAP, the Supplemental Nutritional Assistance Program, is a nutrition program that helps individuals and families stretch their food budget and buy healthy foods. Would you like to determine if you may be eligible for SNAP?
 A: Yes
 	Q(6.1): Click on the link below.
-	A: <a href="https://aambrogio.github.io/LIT-QNAs/SNAP%20V1.4.html">SNAP</a>
+	A[https://aambrogio.github.io/LIT-QNAs/SNAP%20V1.4.html]: SNAP
 A:No
 	Q(6.2):GOTO:AllSet
 A: Not right now. May I get a link for later?
