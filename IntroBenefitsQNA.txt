@@ -37,14 +37,15 @@ body{
 <h2 class="title">
 	Benefit Finder <sup><font size=-1>Beta</font></sup>
 </h2>
-<p>This is a clinic project under active development by Suffolk's <a href="http://suffolklitlab.org/" target="_blank">LIT Lab</a>. You should not rely on it as a source of legal information. It is likely incomplete.</p>
+<p>This is a class project under active development by Suffolk's <a href="http://suffolklitlab.org/" target="_blank">LIT Lab</a>. You should not rely on it as a source of legal information. It is incomplete. It is intended to be used by students of the Suffolk Law Clinical Program. </p>
+<p> Welcome to the Benefits Finder presented by Suffolk University Law School's Clinical Program. Please proceed through the following questions as if you are the individual attempting to apply for SNAP. </p>
 
 
 After: <script src="https://aambrogio.github.io/LIT-QNAs/scripts.js"></script>
 
 DOC(1): Action Items
 
-Q(1): Welcome to the Benefits Finder presented by Suffolk University Law School's Clinical Program. Are you interested in checking your eligibility for Massachusetts Benefits? 
+Q(1): Are you interested in checking your eligibility for Massachusetts Benefits? 
 A: Yes
 	Q(1.1):GOTO:CheckEligibility
 A: No
