@@ -166,8 +166,8 @@ A[javascript:mail2('','Benefits Finder',doc());]: Open draft email
 Q(next): Do you want to check eligibility for other benefits? 
 A: Yes
 	Q(16.1): Which benefit would you like to check next? Click on the benefit below to open the link.
-	A: <a href="https://aambrogio.github.io/LIT-QNAs/WAPV1.6Edited.html">Weatherization Assistance Program</a>.
-	A: <a href="https://aambrogio.github.io/LIT-QNAs/LIHEAPQNA2018.html">LIHEAP (Fuel Assistance)</a>.
+	A[https://aambrogio.github.io/LIT-QNAs/WAPV1.6Edited.html]: Weatherization Assistance Program
+	A[https://aambrogio.github.io/LIT-QNAs/LIHEAPQNA2018.html]: LIHEAP (Fuel Assistance)
 A: No
 	Q(AllSet): Have a nice day. 
 
