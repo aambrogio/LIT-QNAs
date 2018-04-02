@@ -51,7 +51,8 @@ A: Yes
 A: No
 	Q(1.2): You can find more information about SNAP at the Government website. <a href="https://www.mass.gov/snap-benefits-food-stamps">SNAP</a>. How do you wish to proceed?
 	A: I would like to save links for later.
-		DOC(1.2.1): SNAP QNA Link for later (Copy/Paste Link): https://aambrogio.github.io/LIT-QNAs/SNAP%20V1.4.html
+		DOC(1.2.1): 
+SNAP QNA Link for later (Copy/Paste Link): https://aambrogio.github.io/LIT-QNAs/SNAP%20V1.4.html
 SNAP Government Website Link for later (Copy/Paste Link): https://www.mass.gov/snap-benefits-food-stamps
 		Q(1.2.1):GOTO:SNAPQNALINK
 	A: I would like to keep going through this QNA now.
@@ -147,7 +148,8 @@ A: If none of these describe you, click here.
 
 Q(Qualified): You may qualify for SNAP Benefits. You can apply online at <a href="https://hhsvgapps01.hhs.state.ma.us/ierhome/LandingPage.do?method=displayConsumerHomePage&pageSwitch=HOME">Apply to SNAP online</a>. You could also speak with a Department of Transitional Assistance (DTA) Representative at (877) 382-2363. Would you like to open a draft email with some action items?
 A: Yes
-	DOC(13.1): Here is the link to apply to SNAP online (copy/paste): https://hhsvgapps01.hhs.state.ma.us/ierhome/LandingPage.do?method=displayConsumerHomePage&pageSwitch=HOME
+	DOC(13.1): 
+Here is the link to apply to SNAP online (copy/paste): https://hhsvgapps01.hhs.state.ma.us/ierhome/LandingPage.do?method=displayConsumerHomePage&pageSwitch=HOME
 Department of Transitional Assistance (DTA): (877) 382-2363.
 	Q(13.1):GOTO:DRAFT
 A: No
@@ -155,7 +157,8 @@ A: No
 
 Q(Unqualified): It is unlikely you qualify for SNAP Benefits based upon your answers to these questions. If you think this is an error, please contact an attorney specialist or speak with a Department of Transitional Assistance (DTA) Representative at (877) 382-2363. Would you like to open a draft email with some action items?
 A: Yes
-	DOC(14.1): Department of Transitional Assistance (DTA): (877) 382-2363
+	DOC(14.1): 
+Department of Transitional Assistance (DTA): (877) 382-2363
 	Q(14.1):GOTO:DRAFT
 A: No
 	Q(14.2):GOTO:AllSet
