@@ -335,8 +335,8 @@ A[javascript:mail2('','Benefits Finder',doc());]: Open Draft Email
 Q(next): Do you want to check eligibility for other benefits? 
 A: Yes
 	Q(nextwhichbenefit): Which benefit would you like to check next? Click on the benefit below to open the link.
-	A: <a href="https://aambrogio.github.io/LIT-QNAs/WAPV1.6Edited.html">Weatherization Assistance Program</a>.
-	A: <a href="https://aambrogio.github.io/LIT-QNAs/SNAP%20V1.4.html">SNAP: Supplemental Nutrition Assistance Program</a>.
+	A[https://aambrogio.github.io/LIT-QNAs/WAPV1.6Edited.html]: Weatherization Assistance Program
+	A[https://aambrogio.github.io/LIT-QNAs/SNAP%20V1.4.html]: SNAP: Supplemental Nutrition Assistance Program
 A: No
 	Q(17.2): Alright then. Have a nice day. 
 A: Yes, I was redirected here from the WAP QNA and I would like to return there.
@@ -354,4 +354,4 @@ A: No. I was redirected here from the WAP QNA. I would like to return there with
 	Q(18.3):GOTO:WAP
 
 Q(WAP): Now that you have completed the LIHEAP QNA, you can return to the WAP QNA and answer the LIHEAP questions accordingly. Click on the link below to go to the WAP QNA.
-A: <a href="https://aambrogio.github.io/LIT-QNAs/WAPV1.6Edited.html">Weatherization Assistance Program: https://aambrogio.github.io/LIT-QNAs/WAPV1.6Edited.html</a> 
+A[https://aambrogio.github.io/LIT-QNAs/WAPV1.6Edited.html]: Weatherization Assistance Program: https://aambrogio.github.io/LIT-QNAs/WAPV1.6Edited.html 
