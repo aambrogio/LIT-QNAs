@@ -79,7 +79,7 @@ A: Yes
 A: No
 	Q(2.2):GOTO:AllSet
 
-Q(Residency): Are you a resident of Massachusetts?
+Q(Residency): Are you currently living in Massachusetts, specifically at a fixed address? 
 A: Yes
 	Q(3.1):GOTO:Income
 A: No
@@ -299,7 +299,7 @@ A: I am all set.
 Q(Zipcode): What is your zipcode?
 X:number
 	DOC(13.1): 
-Zipcode for DHCD Resource Locator Website<x>Zipcode</x>
+Zipcode for DHCD Resource Locator Website:<x>Zipcode</x>
 	Q(13.1): Have you ever applied for fuel assistance for a residence or household in the state of Massachusetts?
 	A: Yes
 		DOC(13.1.1): 
